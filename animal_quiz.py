@@ -13,7 +13,7 @@ def check_guess(guess, answer):
     still_guessing = True
     attempt = 0
     #define the maximum number of allowed attempts
-    max_attempts = 1
+    max_attempts = 3
     while still_guessing and attempt < max_attempts:            
         if guess.lower() == answer.lower():
             print('Correct answer')
@@ -22,14 +22,14 @@ def check_guess(guess, answer):
         else:
             attempt +=1
             if attempt < max_attempts-1:
-                guess = input('Sorry, wrong answer. Try again. ')
+                guess = input('Sorry, wrong answer. Try again: ')
             elif attempt == max_attempts-1:
-                guess = input('Sorry, wrong answer. You only get one more guess. ')
+                guess = input('Sorry, wrong answer. You only get one more guess: ')
         if attempt == max_attempts:
             print('The correct answer is ' + answer)
 
 # Define the quiz name
-quiz_name = 'Guess the Animal!"
+quiz_name = 'Guess the Animal!'
 score = 0
 print(quiz_name)
 
